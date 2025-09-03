@@ -5,9 +5,9 @@ from sqlalchemy import engine_from_config, pool
 from alembic import context
 
 # Add the parent folder (lib/db) to sys.path so we can import models
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 
-from models import Base  # now Python can find lib/db/models.py
+from lib.db.models import Base # now Python can find lib/db/models.py
 
 # Alembic config
 config = context.config

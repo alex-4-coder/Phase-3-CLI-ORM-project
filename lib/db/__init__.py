@@ -7,7 +7,8 @@ from sqlalchemy.orm import sessionmaker
 DATABASE_URL = "sqlite:///gatekeeper.db"
 
 # Create the engine
-engine = create_engine(DATABASE_URL, echo=True)  # echo=True prints SQL queries for debugging
+engine = create_engine(DATABASE_URL, echo=False)
+
 
 # Create a configured "Session" class
 Session = sessionmaker(bind=engine)
